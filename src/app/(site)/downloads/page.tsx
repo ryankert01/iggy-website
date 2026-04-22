@@ -27,8 +27,18 @@ export const metadata: Metadata = {
 
 const releases = [
   {
-    version: "0.7.0-incubating",
+    version: "0.8.0-incubating",
     latest: true,
+    date: "2026-04-22",
+    archive:
+      "https://downloads.apache.org/incubator/iggy/0.8.0/iggy-0.8.0-incubating-src.tar.gz",
+    asc: "https://downloads.apache.org/incubator/iggy/0.8.0/iggy-0.8.0-incubating-src.tar.gz.asc",
+    sha: "https://downloads.apache.org/incubator/iggy/0.8.0/iggy-0.8.0-incubating-src.tar.gz.sha512",
+    changelog: "/blogs/2026/04/22/release-0.8.0",
+  },
+  {
+    version: "0.7.0-incubating",
+    latest: false,
     date: "2026-02-24",
     archive:
       "https://downloads.apache.org/incubator/iggy/0.7.0/iggy-0.7.0-incubating-src.tar.gz",
@@ -209,22 +219,22 @@ export default function DownloadsPage() {
         <pre className="overflow-x-auto rounded-xl border border-fd-border bg-fd-card p-5 text-sm leading-relaxed text-fd-foreground/85">
           <code>{`# Download artifact, matching .asc file and KEYS
 curl -O https://downloads.apache.org/incubator/iggy/KEYS
-curl -O https://downloads.apache.org/incubator/iggy/0.7.0/iggy-0.7.0-incubating-src.tar.gz
-curl -O https://downloads.apache.org/incubator/iggy/0.7.0/iggy-0.7.0-incubating-src.tar.gz.asc
+curl -O https://downloads.apache.org/incubator/iggy/0.8.0/iggy-0.8.0-incubating-src.tar.gz
+curl -O https://downloads.apache.org/incubator/iggy/0.8.0/iggy-0.8.0-incubating-src.tar.gz.asc
 
 # Import Iggy release keys
 gpg --import KEYS
 
 # Verify signature
-gpg --verify iggy-0.7.0-incubating-src.tar.gz.asc iggy-0.7.0-incubating-src.tar.gz`}</code>
+gpg --verify iggy-0.8.0-incubating-src.tar.gz.asc iggy-0.8.0-incubating-src.tar.gz`}</code>
         </pre>
 
         <h2 className="mb-4 mt-14 text-2xl font-bold text-fd-foreground">
           Verify the checksum
         </h2>
         <pre className="overflow-x-auto rounded-xl border border-fd-border bg-fd-card p-5 text-sm leading-relaxed text-fd-foreground/85">
-          <code>{`curl -O https://downloads.apache.org/incubator/iggy/0.7.0/iggy-0.7.0-incubating-src.tar.gz.sha512
-shasum -a 512 -c iggy-0.7.0-incubating-src.tar.gz.sha512`}</code>
+          <code>{`curl -O https://downloads.apache.org/incubator/iggy/0.8.0/iggy-0.8.0-incubating-src.tar.gz.sha512
+shasum -a 512 -c iggy-0.8.0-incubating-src.tar.gz.sha512`}</code>
         </pre>
 
         <h2 className="mb-4 mt-14 text-2xl font-bold text-fd-foreground">
